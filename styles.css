@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    position: relative;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 106px);
+    grid-gap: 15px;
+    background-color: #bbada0;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 106px;
+    height: 106px;
+    border-radius: 3px;
+    font-size: 40px; /* Ajusté selon votre demande */
+    font-weight: bold;
+    color: #776e65;
+    background-color: #eee4da;
+}
+
+#game-over-overlay {
+    position: absolute;
+    top: 134px;
+    left: 0;
+    width: 100%;
+    height: 79%;
+    background-color: rgba(238, 228, 218, 0.54);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+#game-over-overlay h1 {
+    font-size: 57px; /* Ajusté selon votre demande */
+    color: #776e65;
+    margin-bottom: 20px;
+}
+
+#restart-button {
+    background-color: #776e65;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#score-box {
+    background-color: #bbada0;
+    border-radius: 3px;
+    /* padding: 10px; */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    margin-left: 378px;
+    margin-bottom: 30px;
+}
+
+.score-label {
+    font-size: 13px; /* Ajusté selon votre demande */
+    padding-top: 10px;
+    color: #eee4da;
+    margin-bottom: 0px;
+    font-weight: 750;
+}
+
+#score {
+    font-size: 28px; /* Ajusté selon votre demande */
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}

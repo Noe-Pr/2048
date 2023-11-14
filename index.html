@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu 2048</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="2048_logo.png" sizes="16x16" type="image/png">
+</head>
+<body>
+    <div id="game-container">
+        <div id="score-container">
+            <div id="score-box">
+                <p class="score-label">SCORE</p>
+                <p id="score">0</p>
+            </div>
+        </div>
+        <div id="game-board">
+            <!-- Les cases de jeu seront générées ici dynamiquement -->
+        </div>
+        <div id="game-over-overlay">
+            <h1>Jeu terminé !</h1>
+            <button id="restart-button">Recommencer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
