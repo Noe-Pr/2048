@@ -1,15 +1,19 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
-    background-color: #f0f0f0;
+    background-color: #faf8ef;
+    /* height: 83vh; */
+    margin-top: 50px;
 }
 
-#game-container {
-    position: relative;
+h1 {
+    color: #776e65;
+    font-size: 59px;
+    position: absolute;
+    margin-top: -5px;
 }
 
 #game-board {
@@ -29,7 +33,7 @@ body {
     width: 106px;
     height: 106px;
     border-radius: 3px;
-    font-size: 40px; /* Ajusté selon votre demande */
+    font-size: 40px;
     font-weight: bold;
     color: #776e65;
     background-color: #eee4da;
@@ -37,10 +41,10 @@ body {
 
 #game-over-overlay {
     position: absolute;
-    top: 134px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 79%;
+    height: 100%;
     background-color: rgba(238, 228, 218, 0.54);
     display: flex;
     flex-direction: column;
@@ -51,34 +55,44 @@ body {
 }
 
 #game-over-overlay h1 {
-    font-size: 57px; /* Ajusté selon votre demande */
+    font-size: 57px;
     color: #776e65;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-#restart-button {
-    background-color: #776e65;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
+
+#game-over-overlay button {
+    background: #8f7a66;
     border-radius: 3px;
+    padding: 10px 20px;
+    color: #f9f6f2;
+    margin-top: 100px;
+    font-size: 20px;
+    border-style: none;
     cursor: pointer;
 }
 
-#score-box {
-    background-color: #bbada0;
+
+#restart-button-score {
+    top: 47px;
+    /* right: 0; */
+    position: absolute;
+    padding: 0px;
+    border: none;
     border-radius: 3px;
-    /* padding: 10px; */
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 120px;
-    margin-left: 378px;
-    margin-bottom: 30px;
+    cursor: pointer;
+    width: 53px;
+    height: 53px;
+    background-color: #8f7a66;
+    color: #5d3c10;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 445px;
+    margin-top: 15px;
 }
 
 .score-label {
-    font-size: 13px; /* Ajusté selon votre demande */
+    font-size: 12px;
     padding-top: 10px;
     color: #eee4da;
     margin-bottom: 0px;
@@ -86,8 +100,18 @@ body {
 }
 
 #score {
-    font-size: 28px; /* Ajusté selon votre demande */
+    font-size: 25px;
     font-weight: bold;
     color: #ffffff;
     margin: 0;
+}
+
+#score-box {
+    background-color: #bbada0;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 70px;
+    margin-bottom: 15px;
+    margin-left: 360px;
 }

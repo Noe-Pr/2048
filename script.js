@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let gameBoard = document.getElementById("game-board");
     let scoreElement = document.getElementById("score");
     let restartButton = document.getElementById("restart-button");
+    let restartButtonScore = document.getElementById("restart-button-score");
 
     let grid = initializeGrid();
     let score = 0;
@@ -142,13 +143,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateGame() {
         generateGameTiles(grid);
         scoreElement.textContent = score;
+        restartButtonScore.style.display = "block";
         if (isGameOver()) {
             showGameOverOverlay();
+            restartButtonScore.style.display = "none";
         }
     }
 
     function generateGameTiles(grid) {
-        gameBoard.innerHTML = ""; // Clear previous content
+        gameBoard.innerHTML = "";
         for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
                 let tileValue = grid[i][j];
@@ -164,12 +167,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     function getTileTextColor(value) {
-        // Set color based on the tile value
         return (value === 2 || value === 4) ? "#808080" : "#ffffff";
     }
     
     function getTileFontSize(value) {
-        // Set font size based on the number of digits
         if (value > 99) {
             return "45px";
         } else if (value < 100) {
@@ -240,12 +241,9 @@ document.addEventListener("DOMContentLoaded", function () {
         gameOverOverlay.style.display = "flex";
     }
 
-    // Event listener for keyboard input
     document.addEventListener("keydown", handleKeyPress);
-
-    // Event listener for restart button
     restartButton.addEventListener("click", restartGame);
+    restartButtonScore.addEventListener("click", restartGame);
 
-    // Generate game tiles for the first time
     updateGame();
 });
